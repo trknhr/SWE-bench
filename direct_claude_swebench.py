@@ -54,6 +54,7 @@ Start by exploring the repository to understand its structure."""
     print("\n🤖 Starting Claude Code...")
     print("=" * 80)
     
+    print(prompt)
     # Claude Codeを実行（インタラクティブに出力を表示）
     process = subprocess.Popen(
         [
@@ -122,7 +123,7 @@ def main():
     dataset = load_dataset("princeton-nlp/SWE-bench_Lite", split="test")
     
     # 特定のインスタンスをフィルタ
-    target_instance = "astropy__astropy-12907"
+    target_instance = "django__django-15814"
     instance = None
     
     for item in dataset:
@@ -145,7 +146,7 @@ def main():
     print("-" * 80)
     
     # ユーザーに確認
-    input("\n⏸️  Press Enter to start Claude Code...")
+    print("\n⏸️  Press Enter to start Claude Code...")
     
     # リポジトリをクローン
     repo_url = f"https://github.com/{instance['repo']}.git"

@@ -7,8 +7,9 @@ import sys
 PREDICTIONS_DIR = Path("predictions")
 LOGS_DIR = Path("logs")
 DEFAULT_INSTANCE_IDS = [
-    "astropy__astropy-12907",
-    # 必要に応じて追加
+    # "astropy__astropy-12907",
+    # "sympy__sympy-11400",
+    "django__django-15814",
 ]
 
 def discover_agents():

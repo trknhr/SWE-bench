@@ -58,6 +58,7 @@ Start by exploring the repository to understand its structure."""
             "agenticode", "-p", prompt,
             # "--model", "claude-opus-4-20250514",
             "--max-turns", "20",  # より多くのターンを許可
+            "--config", Path.home() / ".agenticode.yaml",
             "--allowedTools", "readFile,bash,writeFile,editFile",
             "--permission-mode", "bypassPermissions",
             "--dangerously-skip-permissions"
@@ -121,7 +122,7 @@ def main():
     dataset = load_dataset("princeton-nlp/SWE-bench_Lite", split="test")
     
     # 特定のインスタンスをフィルタ
-    target_instance = "astropy__astropy-12907"
+    target_instance = "django__django-15814"
     instance = None
     
     for item in dataset:
